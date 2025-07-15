@@ -71,6 +71,8 @@ python jd_Generator.py
 
 ```
 ## Streamlit Cloud 
+
+1) Open the app and upload a pdf CV file
 Follow the link to the app:
 https://airecruitmentplatform.streamlit.app/
 
