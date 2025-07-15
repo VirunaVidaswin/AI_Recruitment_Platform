@@ -1,0 +1,21 @@
+
+# Core Libraries
+openai
+langchain
+langchain-community
+langchain-openai
+streamlit
+python-dotenv
+
+# PDF Handling
+pdfplumber
+fpdf
+
+# Data Processing
+pandas
+
+# MongoDB
+pymongo
+
+# Vector Search
+faiss-cpu
