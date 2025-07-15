@@ -70,6 +70,9 @@ To generate 200 job descriptions run the following command:
 python jd_Generator.py
 
 ```
+## Streamlit Cloud 
+Follow the link to the app:
+https://airecruitmentplatform.streamlit.app/
 
 
 
