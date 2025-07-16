@@ -73,5 +73,5 @@ https://ai-platform-app.streamlit.app/
 ---
 ## Visual Representation
 
-Screenshot Evidence/1. Uploading the pdf cv.PNG
+(Screenshot Evidence/1. Uploading the pdf cv.PNG)
 
