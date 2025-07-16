@@ -70,6 +70,8 @@ Follow the provided link and upload a pdf of a cv to proceed with the app.
 https://ai-platform-app.streamlit.app/
 
 
+---
+## Visual Representation
 
-
+Screenshot Evidence/1. Uploading the pdf cv.PNG
 
