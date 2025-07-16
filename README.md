@@ -72,16 +72,26 @@ https://ai-platform-app.streamlit.app/
 
 ---
 ## Visual Representation
-
+---
 1. Uploading a CV into the app
    
 ![Uploading the PDF CV](Screenshot%20Evidence/1.%20Uploading%20the%20pdf%20cv.PNG)
 
+---
+
+
 2. Information extracted from the uploaded File
 ![Details Extracted](https://github.com/VirunaVidaswin/AI_Recruitment_Platform/blob/1765ebd585da8364fcd044c74ff614c708f397a1/Screenshot%20Evidence/2.%20After%20Cv%20uploaded%20Details%20extracted%20and%20saved%20to%20database.PNG)
 
+
+---
+
+
 3. Displaying Recommendations using RAG
 ![Displaying Recommendations ](https://github.com/VirunaVidaswin/AI_Recruitment_Platform/blob/1765ebd585da8364fcd044c74ff614c708f397a1/Screenshot%20Evidence/3.%20Reccomendtaions%20are%20displayed%20as%20dropdown%20boxers.PNG)
+
+
+---
 
 4. Downloadable Jobs via PDF/CSV
 ![Downloading jobs](https://github.com/VirunaVidaswin/AI_Recruitment_Platform/blob/1765ebd585da8364fcd044c74ff614c708f397a1/Screenshot%20Evidence/4.%20PDF%20or%20Csv%20file%20downloadable.PNG)
