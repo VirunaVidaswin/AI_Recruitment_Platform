@@ -12,6 +12,6 @@ def build_faiss_index():
     documents = [Document(page_content=text) for text in texts]
     return FAISS.from_documents(documents, embedding)
 
-def get_recommendations(query_text, k=3):
+def get_recommendations(query_text, k=10):
     index = build_faiss_index()
     return index.similarity_search(query_text, k=k)

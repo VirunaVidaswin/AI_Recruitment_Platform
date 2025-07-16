@@ -21,19 +21,40 @@ if uploaded_file:
         text = "\n".join(page.extract_text() for page in pdf.pages if page.extract_text())
 
     st.subheader("📋 Resume Text Preview")
-    st.text_area("Extracted Text", text[:2000], height=200)
+    st.text_area("Extracted Text", text[:1988], height=200)
 
-    st.subheader("🧠 Resume Insights")
-    resume_data = extract_info(text, type="resume")
-    st.json(resume_data)
+    with st.expander("🧠 Extracted Data from Resume (Click to Expand)"):
+        st.subheader("🧠 Extracted Data from Resume Saved to Database")
+        resume_data_raw = extract_info(text, type="resume")
+        resume_data = json.loads(resume_data_raw)
+        st.json(resume_data)
+
 
     save_document({"type": "resume", "data": resume_data}, collection="resumes")
 
     st.subheader("🎯 Recommended Job Descriptions")
     recommendations = get_recommendations(query_text=str(resume_data))
     for i, r in enumerate(recommendations):
-        st.markdown(f"### 🎯 Match #{i+1}")
-        st.code(r.page_content)
+        try:
+            job = json.loads(r.page_content)
+        except json.JSONDecodeError:
+            st.error(f"❌ Failed to parse match #{i+1}")
+            continue
+        
+        with st.expander(f"🎯 Match #{i+1}: {job.get('Title', 'Unknown')} - {job.get('Location', '')}"):
+            st.markdown(f"**📌 Title:** {job.get('Title')}")
+            st.markdown(f"**📝 Summary:** {job.get('Summary')}")
+            st.markdown(f"**🏢 Location:** {job.get('Location')}")
+            st.markdown(f"**💼 Experience Level:** {job.get('Experience Level')}")
+            st.markdown(f"**💼 Employment Type:** {job.get('Employment Type')}")
+
+            st.markdown("**🧪 Responsibilities:**")
+            for task in job.get("Responsibilities", []):
+                st.markdown(f"- {task}")
+
+            st.markdown("**🛠 Required Skills:**")
+            for skill in job.get("Required Skills", []):
+                st.markdown(f"- {skill}")
 
 # ---------- Download Section (only if there are results) ----------
 if recommendations:
@@ -80,3 +101,7 @@ if recommendations:
     pdf_path = convert_to_pdf(recommendations)
     with open(pdf_path, "rb") as f:
         st.download_button("⬇️ Download as PDF", f, file_name="job_matches.pdf", mime="application/pdf")
+
+
+
+
