@@ -69,7 +69,20 @@ Follow the provided link and upload a pdf of a cv to proceed with the app.
 
 https://ai-platform-app.streamlit.app/
 
+---
+## Work FLow
 
+```
+AI_Recruitment_Platform/
+│
+├── app.py                  ← Main Streamlit application
+├── resume_parser.py        ← LangChain LLM pipeline to extract structured info
+├── RAG.py                  ← Vector-based retrieval and job recommendation logic
+├── mongo_Db.py             ← MongoDB connection and document saving utility
+├── .env                    ← Stores API keys securely
+├── requirements.txt        ← List of dependencies
+└── README.md               ← Documentation and explanation
+---
 ---
 ## Visual Representation
 
