@@ -29,7 +29,7 @@ It’s designed to streamline hiring workflows and match candidates to suitable 
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation on local Machine
 
 ### 🚀 Setup Instructions
 
@@ -64,12 +64,12 @@ streamlit run app.py
 ```
 This will start a local server and will be given in terminal.
 
-## Configuration
-To generate 200 job descriptions run the following command:
-```bash
-python jd_Generator.py
+## Streamlit Cloud App
+Follow the provided link and upload a pdf of a cv to proceed with the app.
 
-```
+https://ai-platform-app.streamlit.app/
+
+
 
 
 
