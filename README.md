@@ -72,7 +72,7 @@ https://ai-platform-app.streamlit.app/
 ---
 ## Work FLow
 
-```
+```bash
 AI_Recruitment_Platform/
 │
 ├── app.py                  ← Main Streamlit application
@@ -82,7 +82,10 @@ AI_Recruitment_Platform/
 ├── .env                    ← Stores API keys securely
 ├── requirements.txt        ← List of dependencies
 └── README.md               ← Documentation and explanation
----
+
+```
+
+
 ---
 ## Visual Representation
 
